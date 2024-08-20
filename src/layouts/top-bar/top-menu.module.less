@@ -1,0 +1,120 @@
+@menu-item-width: 144px;
+
+.override:global(.ant-menu.ant-menu-submenu-popup > .ant-menu) {
+  border-radius: 0;
+}
+
+.override:global(.ant-menu) {
+  margin-left: 8px;
+  font-size: 16px;
+
+  :global {
+    .ant-menu-submenu {
+      padding: 0;
+    }
+
+    .ant-menu-submenu-title {
+      padding: 0 24px;
+    }
+
+    .ant-menu-submenu,
+    .ant-menu-item {
+      .ant-menu-title-content {
+        &,
+        & a {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-menu-submenu-selected,
+    .ant-menu-submenu:hover {
+      color: #fff;
+    }
+  }
+}
+
+.override:global(.ant-menu-root.ant-menu-horizontal.ant-menu-dark) {
+  background-color: transparent !important;
+}
+
+.override:global(.ant-menu-submenu-popup) {
+  :global {
+    .ant-menu-sub {
+      padding: 16px 24px;
+      margin-top: -6px;
+    }
+
+    .ant-menu-item-group-title {
+      width: 96px;
+      height: 32px;
+      padding: 0;
+      line-height: 32px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .ant-menu-item {
+      display: flex;
+      width: @menu-item-width;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 32px;
+      padding: 0;
+      margin: 0;
+      line-height: 32px;
+    }
+
+    .ant-menu-item-group + .ant-menu-item-group {
+      margin-top: 16px;
+    }
+
+    .ant-menu-title-content {
+      display: block;
+      padding: 0 16px;
+    }
+
+    .ant-menu-item-selected {
+      background-color: transparent !important;
+    }
+
+    .ant-menu-item-group {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .ant-menu-item-group-list {
+      display: flex;
+      flex-wrap: wrap;
+      // 4 个导航按钮的宽度
+      max-width: 4 * @menu-item-width;
+      gap: 4px 0;
+
+      .ant-menu-item .ant-menu-title-content {
+        border-radius: 4px;
+
+        &,
+        & a {
+          color: #595959;
+        }
+      }
+
+      .ant-menu-item-active,
+      .ant-menu-item:hover,
+      .ant-menu-item-selected {
+        .ant-menu-title-content {
+          &,
+          & a {
+            background-color: #f0f6ff;
+          }
+        }
+      }
+    }
+
+    .ant-menu-sub,
+    .ant-menu-item {
+      color: #595959;
+    }
+  }
+}
